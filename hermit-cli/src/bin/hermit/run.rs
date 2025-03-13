@@ -558,7 +558,7 @@ impl RunOpts {
         if config.preemption_timeout.is_some() && !reverie_ptrace::is_perf_supported() {
             // TODO(T124429978): this could change back to tracing::warn! when the bug is fixed:
             eprintln!(
-                "WARNING: --preemption-timout requires hardware perf counters \
+                "WARNING: --preemption-timeout requires hardware perf counters \
                 which is not supported on this host, resetting \
                 preemption-timeout to 0"
             );
