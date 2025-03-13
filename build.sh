@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #rustup override set stable
-RUSTC_BOOTSTRAP=1 RUSTFLAGS="-C link-arg=-llzma" cargo build --release
+RUSTC_BOOTSTRAP=1 RUSTFLAGS="-C link-arg=-llzma" cargo build --target x86_64-unknown-linux-gnu --release
 
 # build test binary
 go build -o testbin/thread ./testbin/thread.go
