@@ -9,3 +9,5 @@ hermit.log
 testbin/thread
 testbin/printtime
 testbin/tsc
+testbin/rand
+hermit

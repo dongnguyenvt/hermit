@@ -11,3 +11,5 @@ RUN cd /build && . "$HOME/.cargo/env" && \
 FROM scratch
 
 COPY --from=build /build/target/x86_64-unknown-linux-gnu/release/hermit /hermit
+
+ENTRYPOINT [ "/hermit" ]
