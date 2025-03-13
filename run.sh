@@ -1,3 +1,4 @@
 #!/bin/bash
 
-HERMIT_LOG_FILE=hermit.log ./target/release/hermit run ls --preemption-timeout 0 -- -la
+./target/release/hermit run --preemption-timeout 0 ./target/release/hello_race
+./target/release/hermit run --preemption-timeout 0 testbin/thread
