@@ -5,3 +5,4 @@ target/
 *.preempts
 .idea
 Cargo.lock
+hermit.log
