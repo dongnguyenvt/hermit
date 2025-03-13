@@ -13,3 +13,6 @@ path = "src/test_bin.rs"
 
 [dependencies]
 libc = "0.2.139"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(sanitized)'] }

@@ -38,3 +38,5 @@ tracing = { version = "0.1.41", features = ["attributes", "valuable"] }
 tracing-appender = "0.2.3"
 tracing-subscriber = { version = "0.3.18", features = ["chrono", "env-filter", "json", "local-time", "parking_lot", "registry"] }
 uuid = { version = "1.2", features = ["serde", "v4", "v5", "v6", "v7", "v8"] }
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(fbcode_build)'] }
