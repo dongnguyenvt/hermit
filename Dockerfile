@@ -1,12 +1,10 @@
-FROM golang:1.23 AS build
+FROM rust:1.85.0-bookworm AS build
 
 COPY . /build
 
-RUN apt-get update && apt-get install -y libunwind-dev && \
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh /dev/stdin -y --default-toolchain 1.85.0 --profile minimal
+RUN apt-get update && apt-get install -y libunwind-dev
 
-RUN cd /build && . "$HOME/.cargo/env" && \
-    ./static.sh
+RUN cd /build && ./static.sh
 
 FROM scratch
 
